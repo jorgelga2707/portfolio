@@ -41,17 +41,17 @@
                         <a href="#works">Works</a>
                     </li>
                     <li>
-                        <a href="">Contact me</a>
+                        <a href="#contact">Contact me</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <section class="banner">
             <div class="banner-text">
-                <h1 class="title">My name is Jorge Garcia</h1>
-                <h2 class="title">Full Stack Web Developer</h2>
+                <h1 class="title lines">My name is Jorge Garcia</h1>
+                <h2 class="title lines">Full Stack Web Developer</h2>
                 <p class="resume">Programming dreams!!!</p>
-                <button class="btn-primary">Download resume</button>
+                <button class="btn-primary" id="btn-primary" type="button">Dowload resume</button>
             </div>
             <div class="banner-image">
                 <img src="./img/jorge_actual_hc.jpeg" class="img-profile" alt="foto de perfil">
@@ -360,7 +360,7 @@
             </div>
         </section>
         <!--   contact  -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact__title--container">
                 <h5 class="contact__title">contact</h5>
             </div>
@@ -380,17 +380,32 @@
                 </div>
             </form>
         </section>
-    </main>
         <footer class="footer">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#about-me">About me</a>
+                    </li>
+                    <li>
+                        <a href="#works">Works</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="footer-licks">
-                <a href="https://www.facebook.com/jorge.garcia.7311352/" target="_blank"><img src="./img/fb-oficial-logo.png" /></a>
-                <a href="https://github.com/jorgelga2707" target="_blank"><img src="./img/github-logo-of.webp" /></a>
-                <a href="https://www.linkedin.com/in/jorge-garcia-fssd/" target="_blank"><img src="./img/linkedin-logo.png"/></a>
-                <a href="https://wa.me/+51993797448" target="_blank"><img src="./img/whatsapp-logo.jpeg" /></a>
+                <a href="https://www.facebook.com/jorge.garcia.7311352/" target="_blank"><img src="./img/icon-facebook.svg" /></a>
+                <div class="github-container">
+                    <a href="https://github.com/jorgelga2707" target="_blank"><img src="./img/icon-github.svg" /></a>
+                </div>
+                <a href="https://www.linkedin.com/in/jorge-garcia-fssd/" target="_blank"><img src="./img/icon-linkedin.svg"/></a>
+                <a href="https://wa.me/+51993797448" target="_blank"><img src="./img/icon-whatsapp.svg" /></a>
             </div>
             <div class="copyright">
                 <h2>© Copyright 2023</h2><span>Jorge Garcia</span>
             </div>
         </footer>
+        <script src="./JS/interactive.js"></script>
     </body>
 </html>

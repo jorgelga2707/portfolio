@@ -92,14 +92,18 @@ body{
     text-decoration: none;
     color: #f0f0f0;
     font-weight: 600;
+    width: fit-content;
+    padding: 8px 15px;
+    border-radius: 20px;
 }
 
 .nav ul a:hover{
-    color: #14ffe9;
+    color: #FFD700;
+    background-color: #696969;
 }
 
 .banner{
-    height: 50vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,16 +111,55 @@ body{
 }
 
 .banner-text{
+    width: 400px;
     text-align: center;
 }
 
+/*  empezamos el texto que se escribe solo  */
+
 .title{
+    margin-top: 10px;
     font-size: 3em;
     font-weight: 500;
+    animation: texto-animado 5s steps(100) 1s normal both,
+    cursor 0.5s steps(50) infinite normal;
+    animation-iteration-count: infinite;
 }
 
+.lines{
+    width: 320px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    white-space: nowrap;
+    border-right: 10px solid green;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+@keyframes texto-animado{
+    from{
+        width: 0;
+    }
+    to{
+        width: 400px;
+    }
+}
+
+@keyframes cursor{
+    from{
+        border-right-color: rgb(255,77,196) ;
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
+
+/*  aca termina  */
+
 .resume{
-    width: 45%;
+    width: fit-content;
     font-weight: 300;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -141,7 +184,15 @@ body{
     font-weight: bold;
 }
 
+.banner-image{
+    width: 340px;
+    height: 340px;
+    position: relative;
+}
+
 .img-profile{
+    position: absolute;
+    margin-left: 40px;
     width: 340px;
     height: 340px;
     border-radius: 50%;
@@ -194,28 +245,33 @@ body{
 .card{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 480px;
     height: auto;
     margin: 20px;
+    margin-bottom: 40px;
+    filter: drop-shadow(8px 8px 10px #ff0000);
+    /*margin: 20px;*/
 }
 
 .img-card-container{
     width: 250px;
-    height: 190px;
-    margin: 5px;
-    margin-bottom: 15px;
+    height: 210px;
+    /*margin: 5px;
+    margin-bottom: 15px;*/
 }
 
 .card div img{
     width: 250px;
-    height: 190px;
+    height: 210px;
     object-fit: cover;
-    border-radius: 10px;
-    margin: 5px;
-    border: solid 2px;
-    box-shadow: 0 15px 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /*margin: 5px;*/
+    /*border: solid 2px;*/
+    /*box-shadow: 0 15px 25px;*/
 }
 
 .text-works{
@@ -226,12 +282,17 @@ body{
 }
 
 .container-detail{
-    margin-left: 10px;
     width: 200px;
+    height: 210px;
+    padding: 8px;
+    background-color: #FFD700;
+    border: solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .container-detail p{
-    margin-top: 8px;
+    /*margin-top: 8px;*/
     width: 100%;
 }
 
@@ -246,12 +307,15 @@ body{
 }
 
 .text-light{
-    font-size: 14px;
+    font-size: 12px;
     color: #8695a4;
+    line-height: normal;
 }
 
 .resume-card{
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #0000ff;
 }
 
 .container-detail h2{
@@ -300,7 +364,7 @@ body{
     font-weight: 500;
     font-size: 30px;
     line-height: 4.2rem;
-    color: #0098EF;
+    color: #f0f0f0;
     margin: 0;
     text-transform: uppercase;
 }
@@ -373,17 +437,42 @@ body{
     align-items: center;
 }
 
-.copyright{
+.footer-licks{
+    width: 310px;
+    margin-bottom: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
 .footer a img{
-    margin-right: 10px;
+    margin-right: 25px;
     width: 50px;
     height: 50px;
 }
+
+.github-container{
+    margin-right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.github-container:hover{
+    filter: grayscale(0.5);
+}
+
+.footer a img:hover{
+    filter: grayscale(0.5);
+}
+
 
 @media screen and (max-width: 1030px){
     .banner{
@@ -399,12 +488,17 @@ body{
 
 @media screen and (max-width: 480px){
 
+    .nav{
+        width: 220px;
+    }
+    
     .nav ul li{
         padding: 8px;
     }
 
     .nav ul a{
-        font-size: 12px;
+        font-size: 10px;
+        padding: 4px 4px;
     }
 
     .banner{
@@ -418,24 +512,53 @@ body{
     }
 
     .banner-text h1, .banner-text h2{
-        font-size: 26px;
+        font-size: 18px;
+    }
+
+    @keyframes texto-animado{
+        from{
+            width: 0;
+        }
+        to{
+            width: 300px;
+        }
     }
 
     .banner-text p{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .banner-image{
         order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 260px;
+        width: 320px;
     }
 
     .banner-image .img-profile{
         width: 250px;
         height: 250px;
         margin: auto;
-        display: flex;
+        /*display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center;*/
+    }
+
+    .card div img{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .container-detail{
+        width: 250px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     .wrapper{
@@ -445,5 +568,21 @@ body{
 
     .card{
         width: 310px;
+    }
+
+    .footer a img{
+        margin-right: 10px;
+    }
+
+    .copyright{
+        justify-content: space-between;
+    }
+
+    .copyright h2{
+        font-size: 18px;
+    }
+
+    .copyright span{
+        font-size: 12px;
     }
 }
