@@ -2,7 +2,7 @@
 const btnPrimary = document.querySelector('#btn-primary');
 
 const downloadCV = () => {
-    window.open('./documents/CV - Jorge Garcia - FrontEnd Developer.pdf');
+    window.open('./documents/CV - Jorge Garcia.pdf');
 }
 
 btnPrimary.addEventListener("click", downloadCV);
