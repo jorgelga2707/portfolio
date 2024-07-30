@@ -2,7 +2,7 @@
 const btnPrimary = document.querySelector('#btn-primary');
 
 const downloadCV = () => {
-    window.open('./documents/CV - Jorge Garcia.pdf');
+    window.open('./documents/Resume - Jorge Garcia Alegre.pdf');
 }
 
 btnPrimary.addEventListener("click", downloadCV);
