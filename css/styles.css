@@ -1876,3 +1876,105 @@ body{
         right: 2px;
     }
 }
+
+/*seccion de nuevos proyectos realizados*/
+/* ===== PROJECTS SECTION ===== */
+
+.new-projects {
+    padding: 80px 10%;
+    background: linear-gradient(90deg, hsl(216, 21%, 24%) 0%, hsl(220, 33%, 2%) 100%);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* ===== CARD ===== */
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 255, 128, 0.2);
+}
+
+/* ===== IMAGE ===== */
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===== CONTENT ===== */
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.project-content p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===== BUTTON ===== */
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #22c55e;
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: #22c55e;
+    color: #0f172a;
+}
+
+@media (max-width: 768px) {
+    .new-projects {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
