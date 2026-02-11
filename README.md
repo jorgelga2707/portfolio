@@ -3,7 +3,7 @@
 Bienvenido al repositorio principal de mi portafolio personal. Aquí puedes encontrar todos mis proyectos destacados organizados por tecnologías, categorías y propósito. Este portafolio refleja mis habilidades, experiencia y crecimiento como **Diseñador y Desarrollador de Videojuegos** y desarrollador de software en general.
 
 🔗 **Visita mi portafolio en línea:**  
-👉 https://jorgelga2707.github.io/portfolio/
+👉 [Portafolio Jorge Garcia](https://portfolio-jorgelga2707.vercel.app/)
 
 ---
 
