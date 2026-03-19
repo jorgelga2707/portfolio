@@ -1,4 +1,4 @@
-/* descargar CV */
+
 const btnPrimary = document.querySelector('#btn-primary');
 
 const downloadCV = () => {
@@ -6,8 +6,6 @@ const downloadCV = () => {
 }
 
 btnPrimary.addEventListener("click", downloadCV);
-
-/* evento scroll animado  */
 
 const idImglogo = document.querySelector('.img-logo-container');
 const textAbout = document.querySelector('.text-about-hidden');
@@ -216,7 +214,6 @@ closeIcon__3.addEventListener('click', () => {
     modal__3.classList.add('hidden-3')
 })
 
-/**** Carousel ****/
 let items = document.querySelectorAll('.slider-works .items-works');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
@@ -254,9 +251,27 @@ prev.onclick = function(){
     loadShow();
 }
 
-/**  event scroll **/
-
 const header = document.querySelector(".header");
 window.addEventListener("scroll",function(){
     header.classList.toggle("active",window.scrollY>0)
+});
+
+const track = document.getElementById("carouselTrack");
+const btnLeft = document.getElementById("btnLeft");
+const btnRight = document.getElementById("btnRight");
+
+const scrollAmount = 320;
+
+btnRight.addEventListener("click", () => {
+    track.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+    });
+});
+
+btnLeft.addEventListener("click", () => {
+    track.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+    });
 });
